@@ -24,12 +24,29 @@ To access the **datasets and code** used in this study, please ensure that all f
 [https://pan.baidu.com/s/1F38LGUh4Ip3_Bi1uTmkqtQ](https://pan.baidu.com/s/1zdF-gntpCQ2yL4EXGHk8pg) 
 Extraction code：please email at 1395401554@qq.com
 
-Examples of the Daytime and Night-time datasets are shown below:
+Workflow for construction and preprocessing of the egg-laying straining behavior video classification dataset in breeder geese.
 
 <img width="4187" height="3596" alt="数据集" src="https://github.com/user-attachments/assets/cf60b226-af78-4a6e-a58f-5ae333df116c" />
+
 A pseudocode overview of the proposed method is provided below:
+
 <img width="518" height="646" alt="伪代码" src="https://github.com/user-attachments/assets/bd31da12-40d8-401e-af7f-06734b6a217f" />
 
 
+## 📁 Repository Structure
 
+The repository contains the implementation and supporting materials for the proposed framework.
+
+```text
+BreederGoose-MSGT-VideoMAE/
+├── dataset/              # Dataset organization and preprocessing
+├── models/               # MSGT-VideoMAE, MGPS, CFTA and ADMF
+├── tracking/             # Individual trajectory processing
+├── optical_flow/         # Optical-flow extraction
+├── train.py              # Model training
+├── test.py               # Model evaluation
+├── inference.py          # Video inference
+├── utils/                # Utility functions
+├── configs/              # Experimental configurations
+└── README.md
 
