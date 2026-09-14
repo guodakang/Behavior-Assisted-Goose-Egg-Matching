@@ -1,42 +1,35 @@
-## A Real-Time Visual Monitoring System for Egg Production of Breeding Geese in Small-Group Natural Mating Cages
+<img width="678" height="268" alt="image" src="https://github.com/user-attachments/assets/b44a5344-3ae3-4d6e-bd79-3a449da4daa1" />## Two-stream motion-saliency-guided temporal VideoMAE for egg-laying straining behavior recognition in breeder geese housed in small-group natural mating cages
 
 ## ✨ Overview
-This study proposes an efficient method for real-time measurement of individual egg-laying performance in small groups of breeding geese housed in natural-mating cages. The SELR system uses night-vision cameras to capture images under both daytime and night-time conditions, which are transmitted to an on-farm server for storage. After annotation, the collected data are used to train and refine the object detection model, TAGM-YOLO. TAGM-YOLO simultaneously identifies individual geese and detects newly laid eggs, and a matching strategy is then applied to associate each egg with the corresponding female. The system has been deployed in a terminal application that supports egg-laying statistics, image traceability, and breeder-goose profile management.
-<img width="1836" height="1890" alt="Figure 1" src="https://github.com/user-attachments/assets/6d1eeb56-8181-44e0-bdd2-92198580cab4" />
+Accurate individual egg-laying records are essential for reproductive performance evaluation, high-producing breeder selection, and breeding-population optimization in breeder geese. However, under **small-group housing in natural mating cages**, multiple female breeder geese share limited laying space, making egg-to-goose attribution difficult when relying only on egg location and spatial relationships.
 
+To address this problem, this study introduces **egg-laying straining behavior** as supplementary behavioral evidence for individual egg attribution and proposes a **Two-Stream Motion Saliency-Guided Temporal VideoMAE (Two-Stream MSGT-VideoMAE)**.
+
+The proposed framework jointly exploits:
+
+- **RGB video** for appearance and posture representation;
+- **Optical flow** for motion dynamics;
+- **Motion-Guided Patch Selection (MGPS)** for emphasizing motion-salient local regions;
+- **Cross-Frame Temporal Association (CFTA)** for modeling continuous temporal evolution;
+- **Adaptive Dual-Modal Fusion (ADMF)** for dynamically exploiting complementary RGB and optical-flow information.
+
+The complete framework was further integrated into a behavior-assisted egg–goose matching system and validated under real farm conditions for continuous individual egg-laying monitoring.
+
+
+<img width="10083" height="3974" alt="图解摘要" src="https://github.com/user-attachments/assets/dacc6980-09a0-4c61-a75b-e9edf2280974" />
 
 ## 📂 Datasets
 
 To access the **datasets and code** used in this study, please ensure that all files are downloaded from the following Baidu Netdisk link: 
-https://pan.baidu.com/s/1F38LGUh4Ip3_Bi1uTmkqtQ 
+[https://pan.baidu.com/s/1F38LGUh4Ip3_Bi1uTmkqtQ](https://pan.baidu.com/s/1zdF-gntpCQ2yL4EXGHk8pg) 
 Extraction code：please email at 1395401554@qq.com
 
 Examples of the Daytime and Night-time datasets are shown below:
 
-<img width="525" height="454" alt="image" src="https://github.com/user-attachments/assets/e0464c08-4943-4cf0-b5ab-222e00d1e9d4" />
-
+<img width="4187" height="3596" alt="数据集" src="https://github.com/user-attachments/assets/cf60b226-af78-4a6e-a58f-5ae333df116c" />
 A pseudocode overview of the proposed method is provided below:
-<img width="600" height="750" alt="伪代码" src="https://github.com/user-attachments/assets/e4cd9b42-b798-4e1e-9f65-a5b1afc27062" />
-
-
-## 🧩 Method — Egg–Goose Matching
-
-Using TAGM-YOLO detections, eggs are assigned to the nearest female goose (by centre-to-centre distance) within the Egg-Laying Area (ELA), and both the individual and cage egg counts are updated. An Egg Exit Area (EEA) marks when an egg has rolled into the collection zone. To avoid double counting, a moving Match-Forbidden Area (MFA) (radius = 2× egg box width) is created after matching; eggs inside the MFA are ignored until the egg exits the ELA (touches the EEA) or disappears without overlapping any goose box.
-<img width="2930" height="3024" alt="Figure 7" src="https://github.com/user-attachments/assets/2e959503-9f1c-421b-a232-0a4cfb80c2d7" />
+<img width="518" height="646" alt="伪代码" src="https://github.com/user-attachments/assets/bd31da12-40d8-401e-af7f-06734b6a217f" />
 
 
 
-## 🎥 结果
 
-The demonstration videos can be found at the end of the paper: Supplementary Video 1.mp4 and Supplementary Video 2.mp4.
-
-Supplementary Video 1.mp4 compares MFA radius = 2×egg_width with MFA radius = 1×egg_width.
-
-![Supplementary Video 1](https://github.com/user-attachments/assets/d17ce2a7-99b6-4e39-ae82-85a5f9713dea)
-
-
-
-Supplementary Video 2.mp4 compares MFA radius = 2×egg_width with no MFA.
-
-
-![Supplementary Video 2](https://github.com/user-attachments/assets/e52be715-aab1-4576-b53d-1ef1341eab30)
