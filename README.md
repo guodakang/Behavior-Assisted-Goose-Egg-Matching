@@ -1,4 +1,4 @@
-<img width="678" height="268" alt="image" src="https://github.com/user-attachments/assets/b44a5344-3ae3-4d6e-bd79-3a449da4daa1" />## Two-stream motion-saliency-guided temporal VideoMAE for egg-laying straining behavior recognition in breeder geese housed in small-group natural mating cages
+## Two-stream motion-saliency-guided temporal VideoMAE for egg-laying straining behavior recognition in breeder geese housed in small-group natural mating cages
 
 ## ✨ Overview
 Accurate individual egg-laying records are essential for reproductive performance evaluation, high-producing breeder selection, and breeding-population optimization in breeder geese. However, under **small-group housing in natural mating cages**, multiple female breeder geese share limited laying space, making egg-to-goose attribution difficult when relying only on egg location and spatial relationships.
