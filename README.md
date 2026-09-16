@@ -21,7 +21,7 @@ The complete framework was further integrated into a behavior-assisted egg–goo
 ## 📂 Datasets
 
 To access the **datasets and code** used in this study, please ensure that all files are downloaded from the following Baidu Netdisk link: 
-[https://pan.baidu.com/s/1F38LGUh4Ip3_Bi1uTmkqtQ](https://pan.baidu.com/s/1zdF-gntpCQ2yL4EXGHk8pg) 
+https://pan.baidu.com/s/1d31kouwmnAsXZtxh1khqwg
 Extraction code：please email at 1395401554@qq.com
 
 Workflow for construction and preprocessing of the egg-laying straining behavior video classification dataset in breeder geese.
