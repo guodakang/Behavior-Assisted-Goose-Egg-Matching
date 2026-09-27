@@ -31,22 +31,3 @@ Workflow for construction and preprocessing of the egg-laying straining behavior
 A pseudocode overview of the proposed method is provided below:
 
 <img width="518" height="646" alt="伪代码" src="https://github.com/user-attachments/assets/bd31da12-40d8-401e-af7f-06734b6a217f" />
-
-
-## 📁 Repository Structure
-
-The repository contains the implementation and supporting materials for the proposed framework.
-
-```text
-BreederGoose-MSGT-VideoMAE/
-├── dataset/              # Dataset organization and preprocessing
-├── models/               # MSGT-VideoMAE, MGPS, CFTA and ADMF
-├── tracking/             # Individual trajectory processing
-├── optical_flow/         # Optical-flow extraction
-├── train.py              # Model training
-├── test.py               # Model evaluation
-├── inference.py          # Video inference
-├── utils/                # Utility functions
-├── configs/              # Experimental configurations
-└── README.md
-
